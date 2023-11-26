@@ -1,0 +1,643 @@
+/* HeroSection.css */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Hide scrollbar track */
+::-webkit-scrollbar {
+  width: 5px; /* Set the width of the scrollbar */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar handle */
+  border-radius: 5px; /* Rounded corners for the scrollbar handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Color of the scrollbar handle on hover */
+}
+
+/* Handle when dragged */
+::-webkit-scrollbar-thumb:active {
+  background-color: #333; /* Color of the scrollbar handle when dragged */
+}
+
+/* For Firefox */
+/* Hide scrollbar track */
+scrollbar {
+  width: 0;
+}
+
+/* Handle */
+scrollbar-thumb {
+  background-color: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* Handle when dragged */
+scrollbar-thumb:active {
+  background-color: #333;
+}
+
+@font-face {
+  font-family: 'brownpaper'; /* Choose a name for your font family */
+  src: url('./fonts/Brown Paper.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'shouter'; /* Choose a name for your font family */
+  src: url('./fonts/SHOUTER.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'handwritten'; /* Choose a name for your font family */
+  src: url('./fonts/handwritten/ButterCookie-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'buttercookie'; /* Choose a name for your font family */
+  src: url('./fonts/butter_cookie_sans/ButterCookie-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'easter'; /* Choose a name for your font family */
+  src: url('./fonts/easter_risen/EasterRisen.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'honey'; /* Choose a name for your font family */
+  src: url('./fonts/honey_biscuit/Honey-Biscuit.otf') format('opentype');
+}
+
+.hero-section {
+  background: url('./images/best-thai-resturant-melbourne-south-wharf-bangpop-10.jpg') center/cover no-repeat;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-attachment: fixed;
+  height: 800px;
+  background-position: center top;
+}
+  
+  .hero-overlay {
+    background: rgba(0, 0, 0, 0.5); 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .animated-text {
+    animation: slideIn 1.5s ease-in-out; /* Add a slide-in animation to the text */
+  }
+  
+  .highlight {
+    color: #2AAA8A; /* Highlight color for the span */
+    font-family: 'brownpaper', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+  }
+
+  .highlight1 {
+    color: #CC5500; /* Highlight color for the span */
+    font-family: 'brownpaper', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+  }
+
+  .highlight2 {
+    color: #0096FF; /* Highlight color for the span */
+    font-family: 'brownpaper', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+  }
+
+  .highlight3 {
+    color: #E30B5C; /* Highlight color for the span */
+    font-family: 'brownpaper', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+  }
+
+  .highlight4 {
+    color: #FFBF00; /* Highlight color for the span */
+    font-family: 'brownpaper', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+  }
+
+  .highlight5 {
+    color: #fff; /* Highlight color for the span */
+    font-family: 'shouter', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+  }
+
+  .highlight6 {
+    color: #CC5500; /* Highlight color for the span */
+    font-family: 'shouter', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  }
+
+  .highlight7 {
+    color: #E30B5C; /* Highlight color for the span */
+    font-family: 'shouter', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  }
+
+  .highlight8 {
+    color: #0096FF; /* Highlight color for the span */
+    font-family: 'shouter', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  }
+
+  .highlight9 {
+    color: #2AAA8A; /* Highlight color for the span */
+    font-family: 'shouter', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  }
+
+  .highlight22 {
+    color: #CC5500; /* Highlight color for the span */
+    font-family: 'brownpaper', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Set text colors to white */
+  .hero-overlay h2,
+  .hero-overlay h5,
+  .hero-overlay button {
+    color: #fff;
+  }
+  
+  .hero-shape {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Adjust the height of the shape */
+    clip-path: url(#waveClip);
+}
+  
+  /* Fun and unique headline styles */
+  .hero-overlay h2 {
+    font-size: 3.5em; /* Adjust the font size */
+    font-weight: 900; /* Set font weight for a bold look */
+    font-family: 'Fredoka One', sans-serif; /* Use a playful font family */
+    letter-spacing: 5px; /* Add letter-spacing for a fun look */
+    text-align: center; /* Center the text */
+    margin-bottom: 20px; /* Add some spacing below the headline */
+    color: #ff4081; /* Set a vibrant color for the headline */
+  }
+  
+  .hero-overlay h5 {
+    font-size: 1.8em; /* Adjust the font size */
+    font-weight: 400; /* Set font weight for a standard look */
+    text-align: center; /* Center the text */
+    margin-bottom: 30px; /* Add some spacing below the subtitle */
+  }
+  
+  .hero-overlay button {
+    font-size: 1.2em; /* Adjust the font size */
+    font-weight: 700; /* Set font weight for a bold look */
+    padding: 15px 30px; /* Add padding to the button */
+    margin-top: 10px; /* Add some spacing above the button */
+    background-color: #2AAA8A; /* Set a vibrant background color for the button */
+    border: none; /* Remove button border for a clean look */
+    border-radius: 25px; /* Add border-radius for rounded corners */
+    cursor: pointer; /* Add a pointer cursor for interaction */
+    transition: background-color 0.3s; /* Add a smooth transition for color change */
+  }
+  
+  .hero-overlay button:hover {
+    background-color: #E30B5C; /* Change the background color on hover for a playful effect */
+  }
+
+  .custom-shape-divider-bottom-1700721532 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1700721532 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 118px;
+}
+
+.custom-shape-divider-bottom-1700721532 .shape-fill {
+    fill: #81B1CE;
+}
+
+.curve-shape {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.curve-shape svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.curve-shape .shape-fill {
+  fill: #FFFFFF;
+}
+
+.shape-curve {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.shape-curve svg {
+  position: relative;
+  display: block;
+  width: calc(115% + 1.3px);
+  height: 79px;
+}
+
+.shape-curve .shape-fill {
+  fill: #81B1CE;
+}
+
+.wave1 {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.wave1 svg {
+  position: relative;
+  display: block;
+  width: calc(125% + 1.3px);
+  height: 81px;
+}
+
+.wave1 .shape-fill {
+  fill: #FFFFFF;
+}
+
+.spacer {
+    aspect-ratio: 1000/400;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.layer1 {
+  background-image: url('./images/stacked-waves-haikei.svg')
+}
+
+.layer2 {
+  background-image: url('./images/layered-waves-haikei.svg')
+}
+
+.hero-background-or {
+  background: 
+  linear-gradient(135deg,#0000 20.5%,#c38200 0 29.5%,#0000 0) 0 35.5px,
+  linear-gradient( 45deg,#0000 8%,#c38200 0 17%, #0000 0 58%) 71px 0,
+  linear-gradient(135deg,#0000 8%,#c38200 0 17%, #0000 0 58%,#c38200 0 67%,#0000 0),        
+  linear-gradient( 45deg,#0000 8%,#c38200 0 17%, #0000 0 58%,#c38200 0 67%,#0000 0 83%,#c38200 0 92%,#0000 0),
+  #c7a616;
+  background-size: 142px 142px;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-background-gr {
+  background-color: #2AAA8A;
+}
+
+.hero-background-dark {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(45deg,#0000 calc(25%/3), #168bc7 0 calc(50%/3),
+  #0000 0 calc(250%/3), #168bc7 0 calc(275%/3),
+  #0000 0),linear-gradient( 45deg,#168bc7 calc(25%/3), #0000 0 calc(50%/3),
+  #168bc7 0 25%, #0000 0 75%,
+  #168bc7 0 calc(250%/3), #0000 0 calc(275%/3),
+  #168bc7 0),
+  linear-gradient(-45deg,#0000 calc(25%/3), #168bc7 0 calc(50%/3),
+  #0000 0 calc(250%/3), #168bc7 0 calc(275%/3),
+  #0000 0),linear-gradient(-45deg,#168bc7 calc(25%/3), #0000 0 calc(50%/3),
+  #168bc7 0 25%, #0000 0 75%,
+  #168bc7 0 calc(250%/3), #0000 0 calc(275%/3),
+  #168bc7 0)
+  #004f9e;
+  background-size: 142px 142px;
+  background-position: 0 0, 71px  71px;
+  background-attachment: fixed;
+}
+
+.hero-background-pk {
+  background-color: #E30B5C;
+}
+
+.hero-background-bl {
+  background-color: #0096FF;
+}
+
+.hero-background-yl {
+  background: 
+  linear-gradient(135deg,#0000 20.5%,#b6ae66 0 29.5%,#0000 0) 0 9px,
+  linear-gradient( 45deg,#0000 8%,#b6ae66 0 17%, #0000 0 58%) 18px 0,
+  linear-gradient(135deg,#0000 8%,#b6ae66 0 17%, #0000 0 58%,#b6ae66 0 67%,#0000 0),        
+  linear-gradient( 45deg,#0000 8%,#b6ae66 0 17%, #0000 0 58%,#b6ae66 0 67%,#0000 0 83%,#b6ae66 0 92%,#0000 0),
+  #c49d27;
+  background-size: 36px 36px;
+  background-attachment: fixed;
+}
+
+.hero-background-headline {
+  background: linear-gradient(45deg, #FFA07A, #FFD700, #FF69B4);
+}
+
+.hero-background-wt {
+  position: relative;
+  z-index: 1;
+  background-color: #ffffff;
+}
+
+.hero-background-blk {
+  position: relative;
+  z-index: 1;
+  background-color: #36454F;
+}
+
+.hero-background-dining {
+  position: relative;
+  z-index: 1;
+  background-color: #097969;
+  margin:0;  
+}
+
+.subscribe-bg {
+  position: relative;
+  z-index: 1;
+  background-color: #DE3163;
+}
+
+.card-background-gr {
+  background:
+  conic-gradient(from 135deg,rgba(47, 172, 15, 0.27) 90deg,#0000 0) 18px calc(18px/2),
+  conic-gradient(from 135deg,#a0eca7 90deg,#0000 0),
+  conic-gradient(from 135deg at 50% 0,rgba(47, 172, 15, 0.27) 90deg,#0000 0) #a0eca7;
+  background-size: 36px 18px;
+  background-attachment: fixed;
+}
+
+.menu-bg {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(to right, #0096FF, #2AAA8A);
+}
+
+.about-bg {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(to right, #ee4e34, #fc466b);
+}
+
+.hover-card {
+  margin: 0 auto;
+  transition: transform .2s; 
+}
+
+.hover-card:hover {
+  transform: scale(1.1);
+}
+
+.chalkboard {
+  background-color: #2c3e50; /* Chalkboard color */
+
+}
+
+.stylish-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Adjust the height as needed */
+  overflow: auto; /* Change to 'auto' if you want scrolling */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .stylish-section {
+    width: 80%; /* Adjust the width for smaller screens */
+    height: auto; /* Allow the height to adjust based on content */
+  }
+}
+
+.shape-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.content-container {
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+}
+
+.logo-container {
+  margin-bottom: 20px;
+}
+
+.logo {
+  height: 300px;
+  filter: brightness(1.2) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.description {
+  font-family: 'Noto Sans, sans-serif';
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.button-container {
+  margin-top: 20px;
+  font-family: 'brownpaper, sans-serif';
+}
+
+.photo-frame {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
+}
+
+.text-container {
+  padding: 20px;
+}
+
+.wall-note {
+  background-color: #f0f0f0; /* Adjust the background color as needed */
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  color: black;
+}
+
+@media (max-width: 960px) {
+  .photo-frame {
+    max-width: 100%; /* Adjust for smaller screens */
+  }
+
+  .text-container {
+    padding: 10px; /* Adjust for smaller screens */
+  }
+}
+
+.custom-shape-divider-bottom-1701006208 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  z-index: 2;
+}
+
+.custom-shape-divider-bottom-1701006208 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 109px;
+}
+
+.custom-shape-divider-bottom-1701006208 .shape-fill {
+  fill: #097969;
+}
+
+.custom-shape-divider-top-1701006373 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 2;
+}
+
+.custom-shape-divider-top-1701006373 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 112px;
+}
+
+.custom-shape-divider-top-1701006373 .shape-fill {
+  fill: #097969;
+}
+
+.custom-shape-divider-top-1701006493 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 2;
+}
+
+.custom-shape-divider-top-1701006493 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 112px;
+}
+
+.custom-shape-divider-top-1701006493 .shape-fill {
+  fill: #DE3163;
+}
+
+.custom-shape-divider-bottom-1701007419 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  z-index: 2;
+}
+
+.custom-shape-divider-bottom-1701007419 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 89px;
+}
+
+.custom-shape-divider-bottom-1701007419 .shape-fill {
+  fill: #FFFFFF;
+}
+
+.custom-shape-divider-top-1701007588 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 2;
+}
+
+.custom-shape-divider-top-1701007588 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 89px;
+}
+
+.custom-shape-divider-top-1701007588 .shape-fill {
+  fill: #FFFFFF;
+}
