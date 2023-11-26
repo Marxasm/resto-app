@@ -108,19 +108,15 @@ const HomePage = () => {
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // Your existing code for images and other components
-
   useEffect(() => {
     const intervalId = setInterval(() => {
-      // Update the activeIndex to the next image
       setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // Change the interval time (in milliseconds) as needed
-
+    }, 3000); 
+  
     return () => {
-      // Clear the interval when the component is unmounted
       clearInterval(intervalId);
     };
-  }, [activeIndex, images.length]);
+  }, [images.length]);
   return (
   <div className='hero-background-headline'>
     {/* Carousel */}
