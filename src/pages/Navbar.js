@@ -29,7 +29,6 @@ const Navbar = () => {
           style={{ height: '50px', marginRight: '10px', filter: 'brightness(1.2)' }}
         />
         <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontWeight: 'bold', letterSpacing: '1px', color: '#ffffff', fontSize: '1.0em' }}>
-          Your App Name
         </Typography>
         {!isMobile && (
           <>
