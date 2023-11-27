@@ -424,35 +424,38 @@ const OtherPage = () => {
   const [isImageTransitioning, setIsImageTransitioning] = useState(false);
   const containerRef = useRef(null);
 
-  const handleScroll = () => {
-    const scrollPosition = window.scrollY;
+ const handleScroll = () => {
+  const scrollPosition = window.scrollY;
 
-    // Scrolling down
-    if (scrollPosition > lastScrollPosition && currentSection < moreimg.length - 1) {
-      // Check if scrolled to the next section
-      if (scrollPosition >= sectionPositions[currentSection + 1]) {
-        setIsImageTransitioning(true);
-        setCurrentSection(currentSection + 1);
-      }
+  // Scrolling down
+  if (scrollPosition > lastScrollPosition && currentSection < moreimg.length - 1) {
+    // Check if scrolled to the next section
+    if (scrollPosition >= sectionPositions[currentSection + 1]) {
+      setIsImageTransitioning(true);
+      setCurrentSection(currentSection + 1);
     }
+  }
 
-    // Scrolling up
-    if (scrollPosition < lastScrollPosition && currentSection > 0) {
-      // Check if scrolled to the previous section
-      if (scrollPosition <= sectionPositions[currentSection - 1]) {
-        setIsImageTransitioning(true);
-        setCurrentSection(currentSection - 1);
-      }
+  // Scrolling up
+  if (scrollPosition < lastScrollPosition && currentSection > 0) {
+    // Check if scrolled to the previous section
+    if (scrollPosition <= sectionPositions[currentSection - 1]) {
+      setIsImageTransitioning(true);
+      setCurrentSection(currentSection - 1);
     }
+  }
 
-    setLastScrollPosition(scrollPosition);
-  };
+  setLastScrollPosition(scrollPosition);
+};
 
   const calculateSectionPositions = () => {
-    const sections = containerRef.current.querySelectorAll('.section');
-    const positions = Array.from(sections).map((section) => section.offsetTop);
+    // Check if containerRef.current is not null before using it
+    if (containerRef.current) {
+      const sections = containerRef.current.querySelectorAll('.section');
+      const positions = Array.from(sections).map((section) => section.offsetTop);
 
-    setSectionPositions(positions);
+      setSectionPositions(positions);
+    }
   };
 
   useEffect(() => {
@@ -481,8 +484,8 @@ const OtherPage = () => {
     <br></br><br></br><br></br><br></br><br></br><br></br>
     <StyledContainer style={{ padding: '20px' }}>
       <Grid container spacing={4}>
-        {/* First Column - Image */}
-        <Grid item xs={12} md={6} style={{ position: 'relative' }}>
+         {/* First Column - Image */}
+         <Grid item xs={12} md={6} style={{ position: 'relative' }}>
           <div
             style={{
               position: 'sticky',
@@ -490,21 +493,24 @@ const OtherPage = () => {
               transition: 'top 0.3s ease',
             }}
           >
-            <img
-              src={moreimg[currentSection]}
-              alt="Scrolling Image"
-              style={{
-                width: '100%',
-                height: 'auto',
-                maxWidth: '600px',
-                maxHeight: '450px',
-                boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
-                borderRadius: '8px',
-                opacity: isImageTransitioning ? 0 : 1, // Fade out during transition
-                transition: 'opacity 0.5s ease', // Smooth opacity transition
-              }}
-              onLoad={handleImageTransitionEnd}
-            />
+            {/* Check if containerRef.current is not null before using it */}
+            {containerRef.current && (
+              <img
+                src={moreimg[currentSection]}
+                alt="Scrolling Image"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  maxWidth: '600px',
+                  maxHeight: '450px',
+                  boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
+                  borderRadius: '8px',
+                  opacity: isImageTransitioning ? 0 : 1,
+                  transition: 'opacity 0.5s ease',
+                }}
+                onLoad={handleImageTransitionEnd}
+              />
+            )}
           </div>
         </Grid>
 

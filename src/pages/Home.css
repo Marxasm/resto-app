@@ -339,19 +339,6 @@ scrollbar-thumb:active {
   background-image: url('./images/layered-waves-haikei.svg')
 }
 
-.hero-background-or {
-  background: 
-  linear-gradient(135deg,#0000 20.5%,#c38200 0 29.5%,#0000 0) 0 35.5px,
-  linear-gradient( 45deg,#0000 8%,#c38200 0 17%, #0000 0 58%) 71px 0,
-  linear-gradient(135deg,#0000 8%,#c38200 0 17%, #0000 0 58%,#c38200 0 67%,#0000 0),        
-  linear-gradient( 45deg,#0000 8%,#c38200 0 17%, #0000 0 58%,#c38200 0 67%,#0000 0 83%,#c38200 0 92%,#0000 0),
-  #c7a616;
-  background-size: 142px 142px;
-  background-attachment: fixed;
-  position: relative;
-  z-index: 1;
-}
-
 .hero-background-gr {
   background-color: #2AAA8A;
 }
@@ -374,7 +361,19 @@ scrollbar-thumb:active {
   #004f9e;
   background-size: 142px 142px;
   background-position: 0 0, 71px  71px;
-  background-attachment: fixed;
+}
+
+
+.hero-background-or {
+  background: 
+  linear-gradient(135deg,#0000 20.5%,#c38200 0 29.5%,#0000 0) 0 35.5px,
+  linear-gradient( 45deg,#0000 8%,#c38200 0 17%, #0000 0 58%) 71px 0,
+  linear-gradient(135deg,#0000 8%,#c38200 0 17%, #0000 0 58%,#c38200 0 67%,#0000 0),        
+  linear-gradient( 45deg,#0000 8%,#c38200 0 17%, #0000 0 58%,#c38200 0 67%,#0000 0 83%,#c38200 0 92%,#0000 0),
+  #c7a616;
+  background-size: 142px 142px;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-background-pk {
